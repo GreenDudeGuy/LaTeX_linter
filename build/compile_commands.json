@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/max/code/LaTeX_linter/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/application.dir/main.cpp.o -c /home/max/code/LaTeX_linter/main.cpp",
+  "file": "/home/max/code/LaTeX_linter/main.cpp"
+},
+{
+  "directory": "/home/max/code/LaTeX_linter/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/application.dir/Reader.cpp.o -c /home/max/code/LaTeX_linter/Reader.cpp",
+  "file": "/home/max/code/LaTeX_linter/Reader.cpp"
+}
+]

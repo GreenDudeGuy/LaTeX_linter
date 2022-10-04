@@ -1,0 +1,3 @@
+C:/Users/maxjd/source/repos/LaTeX_linter/out/build/x64-debug/CMakeFiles/LaTeX_linter.dir
+C:/Users/maxjd/source/repos/LaTeX_linter/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/maxjd/source/repos/LaTeX_linter/out/build/x64-debug/CMakeFiles/rebuild_cache.dir

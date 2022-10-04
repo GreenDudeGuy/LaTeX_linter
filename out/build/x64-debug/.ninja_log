@@ -1,0 +1,6 @@
+# ninja log v5
+6	726	6854564015458089	CMakeFiles/LaTeX_linter.dir/LaTeX_linter.cpp.obj	a33ecf2481e616b8
+0	778	6854564016007729	CMakeFiles/LaTeX_linter.dir/FileReader.cpp.obj	938384ce099f8dd7
+779	1234	6854564020354886	LaTeX_linter.exe	f1a79f9282179576
+1	1103	6854565571682339	CMakeFiles/LaTeX_linter.dir/FileReader.cpp.obj	938384ce099f8dd7
+1104	1359	6854565573710952	LaTeX_linter.exe	f1a79f9282179576
