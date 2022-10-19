@@ -1,6 +1,7 @@
 List of all exeternal components used in this project:
 
-1.https://github.com/nlohmann/json for parsing from JSON files to C++.
+1. https://github.com/nlohmann/json for parsing from JSON files to C++.
 
 2. https://google.github.io/googletest/ (GoogleTest) to test my rules.
 
+3. CMake to build and compile the program.
