@@ -1,13 +1,20 @@
 #include <string>
 #include <iostream>
 #include <filesystem>
-//#include "libraries/json.hpp"
+#include "libraries/json.hpp"
 #include "Reader.h"
 
-// using json = nlohmann::json;
+using json = nlohmann::json;
 
 int main()
 {
+    std::ifstream f("rules.json");
+    json data = json::parse(f);
+    bool intentionsRule = data.at("rules")[0].at("active");
+    bool newlineRule = data.at("rules")[1].at("active");
+    bool formatCommentRule = data.at("rules")[2].at("active");
+    bool blankLineRule = data.at("rules")[3].at("active");
+    int blankLineRuleInt = data.at("rules")[3].at("number");
     int opt;
     std::cout << "Hello and welcome!\nPlease pick a option:\n";
     while (true)
@@ -47,7 +54,7 @@ int main()
             if (std::filesystem::exists(fileName))
             {
                 Reader Readfile;
-                Readfile.allRules(fileName, true, true, true, true, 1);
+                Readfile.allRules(fileName, intentionsRule, newlineRule, formatCommentRule, blankLineRule, blankLineRuleInt);
             }
             else
             {

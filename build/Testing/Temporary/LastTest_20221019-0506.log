@@ -1,10 +1,10 @@
-Start testing: Oct 19 07:06 CEST
+Start testing: Oct 19 21:40 CEST
 ----------------------------------------------------------
 1/1 Testing: linterTests
 1/1 Test: linterTests
 Command: "/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests"
 Directory: /home/max/projects_code/LaTeX_linter/build/linterTest
-"linterTests" start time: Oct 19 07:06 CEST
+"linterTests" start time: Oct 19 21:40 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/max/projects_code/LaTeX_linter/googletest/googletest/src/gtest_main.cc
@@ -25,11 +25,11 @@ Running main() from /home/max/projects_code/LaTeX_linter/googletest/googletest/s
 [==========] 4 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 4 tests.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"linterTests" end time: Oct 19 07:06 CEST
+"linterTests" end time: Oct 19 21:40 CEST
 "linterTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 19 07:06 CEST
+End testing: Oct 19 21:40 CEST

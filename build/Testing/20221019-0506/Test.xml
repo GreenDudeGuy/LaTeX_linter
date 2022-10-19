@@ -24,8 +24,8 @@
 	ProcessorClockFrequency="3500"
 	>
 	<Testing>
-		<StartDateTime>Oct 19 07:06 CEST</StartDateTime>
-		<StartTestTime>1666155982</StartTestTime>
+		<StartDateTime>Oct 19 21:40 CEST</StartDateTime>
+		<StartTestTime>1666208430</StartTestTime>
 		<TestList>
 			<Test>./linterTest/linterTests</Test>
 		</TestList>
@@ -36,7 +36,7 @@
 			<FullCommandLine>/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.001768</Value>
+					<Value>0.0116078</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -55,8 +55,8 @@
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>Oct 19 07:06 CEST</EndDateTime>
-		<EndTestTime>1666155982</EndTestTime>
+		<EndDateTime>Oct 19 21:40 CEST</EndDateTime>
+		<EndTestTime>1666208430</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

@@ -5,5 +5,6 @@ CMakeFiles/application.dir/Reader.cpp.o: ../Reader.cpp
 CMakeFiles/application.dir/Reader.cpp.o: ../Reader.h
 
 CMakeFiles/application.dir/main.cpp.o: ../Reader.h
+CMakeFiles/application.dir/main.cpp.o: ../libraries/json.hpp
 CMakeFiles/application.dir/main.cpp.o: ../main.cpp
 
