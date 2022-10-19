@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20221017-1646-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.18.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="DESKTOP-9UTKHUI"
+	OSRelease="5.10.16.3-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Fri Apr 2 22:23:49 UTC 2021"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="60"
+	ProcessorCacheSize="6144"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="6303"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3500"
+	>
+	<Testing>
+		<StartDateTime>Oct 18 00:06 CEST</StartDateTime>
+		<StartTestTime>1666044410</StartTestTime>
+		<TestList>
+			<Test>./linterTest/linterTests</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>linterTests</Name>
+			<Path>./linterTest</Path>
+			<FullName>./linterTest/linterTests</FullName>
+			<FullCommandLine>/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0079414</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkVFrwjAQx9/zKY6BoDBb3WNhD7LpGMgY2rFBEYnxbDOSXJek6r79WltcHTh6Txful//d/25RGCNNCppL0x/AzpKGMCONoebHMLf0icK7taAthnMe48daSePRhilRqtCj8+3UWRGmVbauBAMhWHJ/jhUsmm5jqJi6W5O7QnoMWDI8xwqeFG24quto9tKS0WhKFv2wyP/Abc16xrh8O5bA4u0FTrFqF4IdWc29IF1psk6mf7+HbSWR59H4LoIZl6qwyKbHvBTALeBXwZX030A78Bk6hD1XBbqIAWADPTQDVAO+Z1JkIF0EN9CDDJWim7JQGbuC9RooAZhNnufTx39dQn8E2g06La5mwZPnasC6HcYjt8MtHczl2a+dGyw3wWWf0sfrZLmsfYxOrAsu3dUKt+WsrtrxBhUdoo4LYKz83nDxdBmzH4BI+ps=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 18 00:06 CEST</EndDateTime>
+		<EndTestTime>1666044411</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

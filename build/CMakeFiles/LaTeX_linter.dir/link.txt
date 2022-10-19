@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLaTeX_linter.a CMakeFiles/LaTeX_linter.dir/main.cpp.o
+/usr/bin/ranlib libLaTeX_linter.a

@@ -1,12 +1,42 @@
 [
 {
-  "directory": "/home/max/code/LaTeX_linter/build",
-  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/application.dir/main.cpp.o -c /home/max/code/LaTeX_linter/main.cpp",
-  "file": "/home/max/code/LaTeX_linter/main.cpp"
+  "directory": "/home/max/projects_code/LaTeX_linter/build",
+  "command": "/usr/bin/clang++-11   -g -fPIC -std=gnu++17 -o CMakeFiles/LaTeX_linter.dir/main.cpp.o -c /home/max/projects_code/LaTeX_linter/main.cpp",
+  "file": "/home/max/projects_code/LaTeX_linter/main.cpp"
 },
 {
-  "directory": "/home/max/code/LaTeX_linter/build",
-  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/application.dir/Reader.cpp.o -c /home/max/code/LaTeX_linter/Reader.cpp",
-  "file": "/home/max/code/LaTeX_linter/Reader.cpp"
+  "directory": "/home/max/projects_code/LaTeX_linter/build",
+  "command": "/usr/bin/clang++-11   -g -fPIE -std=gnu++17 -o CMakeFiles/application.dir/main.cpp.o -c /home/max/projects_code/LaTeX_linter/main.cpp",
+  "file": "/home/max/projects_code/LaTeX_linter/main.cpp"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build",
+  "command": "/usr/bin/clang++-11   -g -fPIE -std=gnu++17 -o CMakeFiles/application.dir/Reader.cpp.o -c /home/max/projects_code/LaTeX_linter/Reader.cpp",
+  "file": "/home/max/projects_code/LaTeX_linter/Reader.cpp"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build/googletest/googlemock",
+  "command": "/usr/bin/clang++-11  -isystem /home/max/projects_code/LaTeX_linter/googletest/googlemock/include -isystem /home/max/projects_code/LaTeX_linter/googletest/googlemock -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest/include -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest -g -fPIC -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++17 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/max/projects_code/LaTeX_linter/googletest/googlemock/src/gmock_main.cc",
+  "file": "/home/max/projects_code/LaTeX_linter/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build/googletest/googlemock",
+  "command": "/usr/bin/clang++-11  -I/home/max/projects_code/LaTeX_linter/googletest/googlemock/include -I/home/max/projects_code/LaTeX_linter/googletest/googlemock -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest/include -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest -g -fPIC -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++17 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/max/projects_code/LaTeX_linter/googletest/googlemock/src/gmock-all.cc",
+  "file": "/home/max/projects_code/LaTeX_linter/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build/googletest/googletest",
+  "command": "/usr/bin/clang++-11  -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest/include -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest -g -fPIC -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++17 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/max/projects_code/LaTeX_linter/googletest/googletest/src/gtest_main.cc",
+  "file": "/home/max/projects_code/LaTeX_linter/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build/googletest/googletest",
+  "command": "/usr/bin/clang++-11  -I/home/max/projects_code/LaTeX_linter/googletest/googletest/include -I/home/max/projects_code/LaTeX_linter/googletest/googletest -g -fPIC -Wall -Wshadow -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++17 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/max/projects_code/LaTeX_linter/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/max/projects_code/LaTeX_linter/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/max/projects_code/LaTeX_linter/build/linterTest",
+  "command": "/usr/bin/clang++-11  -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest/include -isystem /home/max/projects_code/LaTeX_linter/googletest/googletest -g -fPIE -std=gnu++17 -o CMakeFiles/linterTests.dir/linterTests.cpp.o -c /home/max/projects_code/LaTeX_linter/linterTest/linterTests.cpp",
+  "file": "/home/max/projects_code/LaTeX_linter/linterTest/linterTests.cpp"
 }
 ]

@@ -1,0 +1,21 @@
+{
+    "rules" : [
+        {
+            "rule_name": "intentions",
+            "active": true
+        },
+        {
+            "rule_name": "newline",
+            "active": true
+        },
+        {  
+            "rule_name": "format_comment",
+            "active": true
+        },
+        {
+            "rule_name": "blank_lines",
+            "active": true,
+            "number": 1
+        }
+    ]
+}

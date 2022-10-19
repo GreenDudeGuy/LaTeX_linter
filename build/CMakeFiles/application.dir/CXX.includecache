@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/projects_code/LaTeX_linter/Reader.cpp
+Reader.h
+/home/max/projects_code/LaTeX_linter/Reader.h
+
+/home/max/projects_code/LaTeX_linter/Reader.h
+iostream
+-
+fstream
+-
+string
+-
+filesystem
+-
+vector
+-
+

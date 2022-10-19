@@ -4,19 +4,17 @@
 #include <string>
 #include <filesystem>
 #include <vector>
-#include <gflags/gflags.h>
-
-
 
 class Reader
 {
 public:
-    Reader(std::string& file);
+    Reader(void);
     void CopyFile(std::string file);
-    void formatcomment(std::string file);
-    void blankSections(std::string file);
-    void indent(std::string file);
-    void newlineFix(std::string file);
-private:
+    void formatcomment(std::string &line);
+    void blankSections(std::string &line, int blanklines);
+    void indent(std::string &line, int &beginCount);
+    void newlineFix(std::string &line);
+    void allRules(std::string file, bool intentions, bool newline, bool formatComments, bool blank_lines, int number = 0);
 
+private:
 };

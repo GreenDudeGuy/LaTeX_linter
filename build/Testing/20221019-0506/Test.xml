@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20221019-0506-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.18.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="DESKTOP-9UTKHUI"
+	OSRelease="5.10.16.3-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Fri Apr 2 22:23:49 UTC 2021"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="60"
+	ProcessorCacheSize="6144"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="6303"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3500"
+	>
+	<Testing>
+		<StartDateTime>Oct 19 07:06 CEST</StartDateTime>
+		<StartTestTime>1666155982</StartTestTime>
+		<TestList>
+			<Test>./linterTest/linterTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>linterTests</Name>
+			<Path>./linterTest</Path>
+			<FullName>./linterTest/linterTests</FullName>
+			<FullCommandLine>/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.001768</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/max/projects_code/LaTeX_linter/build/linterTest/linterTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkk1PwzAMhu/9FT6uhzYgceWA+DqAALVDQqqqKWu9EkjsKUnZfj7pOpUVqdt8cuw3j2M7WUukqAEjFc1iWFk2ID7ZoDByK9aWv7DyblFxjeJZzvFjoRV5tKJhbjR6dP7QdbYSTectOmBaVVFxPVgJ2b7aFXQa15e73B3AtcpjGhXJYCU8al5K3eeRfpRlMkhBiz5p1//EI2iGskY7D4GogOz9BXZWHsTTFVsj/S2bDhlUvb0+HVHB7AKMiyeRSy3pOw8TU0xuEjlSnUIqqo89r0+fghBuwtrwQW0nQX+SAXbGcHstePZSx9F5y/MobVLzhsZ/Y/JPgJWUjguFJt5u8vz+rutzfzGNfgEYnOGl====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 19 07:06 CEST</EndDateTime>
+		<EndTestTime>1666155982</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

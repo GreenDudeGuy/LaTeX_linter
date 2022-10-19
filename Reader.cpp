@@ -1,12 +1,10 @@
 #include "Reader.h"
 
-Reader::Reader(std::string& file)
+Reader::Reader()
 {
-    //std::ofstream newfile(file);
-    //newfile.close();
+    // std::ofstream newfile(file);
+    // newfile.close();
 }
-
-
 
 void Reader::CopyFile(std::string file)
 {
@@ -15,110 +13,152 @@ void Reader::CopyFile(std::string file)
     dst << src.rdbuf();
 }
 
-
-void Reader::formatcomment(std::string file)
+void Reader::formatcomment(std::string &line)
 {
-    std::ifstream src(file, std::ios::binary);
-    std::ofstream dst("new" + file, std::ios::binary);
-    for (std::string line; getline(src,line);)
+    if (line[0] == '%')
     {
-        
-        if (line[0] == '%')
+        char notBlank;
+        int count = 1;
+        for (int i = 1; i < line.size(); i++)
         {
-            line.erase(0,1);
-            line.insert(0,"% ");
-            dst << line + "\n";
+            if (line[i] != ' ')
+            {
+                break;
+            }
+            count++;
         }
-        else 
-        {
-            dst << line + "\n";
-        }
+        line.erase(0, count);
+        line.insert(0, "% ");
     }
 }
 
-//fix number adjutstable
-void Reader::blankSections(std::string file)
+void Reader::blankSections(std::string &line, int blanklines)
 {
-    std::ifstream src(file, std::ios::binary);
-    std::ofstream dst("new" + file, std::ios::binary);
-    std::string words[3] = {"\\subsection","\\section","\\chapter"};
-    int arrayLength = sizeof(words)/sizeof(std::string);
-    for (std::string line; getline(src,line);)
+    std::string words[6] = {"\\subsection", "\\section", "\\chapter", "\\paragraph", "\\subparagraph", "\\part"};
+    int arrayLength = sizeof(words) / sizeof(std::string);
+    std::string blankline;
+    for (int i = 0; i < blanklines; i++)
     {
-       for (int i = 0; i < arrayLength; i++)
-       {
+        blankline += "\n";
+    }
+    for (int i = 0; i < arrayLength; i++)
+    {
         if (line.find(words[i]) != std::string::npos)
         {
-            line.insert(0,"\n");
-            dst << line + "\n";
+            line.insert(0, blankline);
+            line + "\n";
             break;
         }
-        if (i == arrayLength-1)
+        if (i == arrayLength - 1)
         {
-            dst << line + "\n";
+            line + "\n";
         }
-       }
     }
 }
 
-void Reader::indent(std::string file)
+void Reader::indent(std::string &line, int &beginCount)
+{
+    std::string indent = "";
+    if (line.find("\\begin{") != std::string::npos)
+    {
+        if (line.find("\\begin{document}") == std::string::npos)
+        {
+            for (int i = 0; i < beginCount; i++)
+            {
+                indent += "\t";
+            }
+            for (int i = 0; i < line.size(); i++)
+            {
+                if (line[i] != ' ')
+                {
+                    line.replace(0, i, indent);
+                    break;
+                }
+            }
+            beginCount++;
+        }
+    }
+    else if (line.find("\\end{") != std::string::npos)
+    {
+        if (line.find("\\end{document}") == std::string::npos)
+        {
+            beginCount--;
+            for (int i = 0; i < beginCount; i++)
+            {
+                indent += "\t";
+            }
+            for (int i = 0; i < line.size(); i++)
+            {
+                if (line[i] != ' ')
+                {
+                    line.replace(0, i, indent);
+                    break;
+                }
+            }
+        }
+    }
+    else
+    {
+        for (int i = 0; i < beginCount; i++)
+        {
+            indent += "\t";
+        }
+        for (int i = 0; i < line.size(); i++)
+        {
+            if (line[i] != ' ')
+            {
+                line.replace(0, i, indent);
+                break;
+            }
+        }
+    }
+}
+
+void Reader::newlineFix(std::string &line)
+{
+    std::string dots = ". ";
+    std::string dotsNewline = ".\n";
+    std::vector<std::pair<std::string, int>> links;
+    size_t posLink = std::string::npos;
+    if (line[0] == '%' || line[0] == '\\')
+    {
+        line + "\n";
+    }
+    else
+    {
+        size_t pos = line.find(dots);
+        while (pos != std::string::npos)
+        {
+            line.replace(pos, dots.size(), dotsNewline);
+            pos = line.find(dots, pos + dotsNewline.size());
+        }
+        line + "\n";
+    }
+}
+
+void Reader::allRules(std::string file, bool intentions, bool newline, bool formatComments, bool blank_lines, int number)
 {
     std::ifstream src(file, std::ios::binary);
     std::ofstream dst("new" + file, std::ios::binary);
     int beginCount = 0;
-    std::string indent = "    ";
-    
-    for (std::string line; getline(src,line);)
+    for (std::string line; getline(src, line);)
     {
-        std::string indentString(beginCount,'\t');
-        //Use && instead of new if statement
-        if (line.find("\\begin{") != std::string::npos)
+        if (formatComments)
         {
-           if(line.find("\\begin{document}") == std::string::npos)
-           {
-                dst << indentString + line + "\n";
-                beginCount++;
-                continue;;
-           }
-            
+            formatcomment(line);
         }
-        //Maybe else if???
-        if (line.find("\\end{") != std::string::npos)
+        if (blank_lines)
         {
-            //Use && instead of new if statement
-            if(line.find("\\end{document}") == std::string::npos)
-           {
-                beginCount--;
-                std::string indentString(beginCount,'\t');
-                dst << indentString + line + "\n";
-                continue;;
-           }
+            blankSections(line, number);
         }
-        dst << indentString + line + "\n";
-    }
-}
-
-void Reader::newlineFix(std::string file)
-{
-    std::ifstream src(file, std::ios::binary);
-    std::ofstream dst("new" + file, std::ios::binary);
-    for (std::string line; getline(src,line);)
-    {
-        std::vector<int> dotPositions;
-        size_t pos = line.find(".", 0);
-        while (pos != std::string::npos)
+        if (newline)
         {
-            dotPositions.push_back(pos);
-            pos = line.find(".", pos+1);
+            newlineFix(line);
         }
-
-        for (int i = 0; i < dotPositions.size(); i++)
+        if (intentions)
         {
-            line.replace(dotPositions[i],dotPositions[i], ".\n");
+            indent(line, beginCount);
         }
         dst << line + "\n";
-
     }
 }
-
-//För korrektion med samtliga delar en funktion med olika checks
