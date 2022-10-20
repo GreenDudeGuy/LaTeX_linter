@@ -1,1 +1,0 @@
-/usr/bin/clang++-11 -g CMakeFiles/application.dir/main.cpp.o CMakeFiles/application.dir/Reader.cpp.o -o application 

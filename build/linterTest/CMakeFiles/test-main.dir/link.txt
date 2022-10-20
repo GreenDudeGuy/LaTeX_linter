@@ -1,1 +1,0 @@
-/usr/bin/clang++-11 -g CMakeFiles/test-main.dir/linterTests.cpp.o -o test-main  ../lib/libgtest_main.a ../libLaTeX_linter.a ../lib/libgtest.a -lpthread 
