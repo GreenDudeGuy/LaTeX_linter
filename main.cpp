@@ -5,7 +5,7 @@
 #include "Reader.h"
 
 using json = nlohmann::json;
-//using namespace nlohmann::literals;
+// using namespace nlohmann::literals;
 int main()
 {
 
@@ -22,21 +22,21 @@ int main()
     bool formatCommentRule = data.at("rules")[2].at("active");
     bool blankLineRule = data.at("rules")[3].at("active");
     int blankLineRuleInt = data.at("rules")[3].at("number");
-    int opt;
     std::cout << "Hello and welcome!\nPlease pick a option:\n";
     while (true)
     {
+        std::string opt;
         std::cout << "1) Show all files\n2) Copy file\n"
                      "3) Apply rules\n10) Quit\n";
         std::cin >> opt;
-        if (opt == 1)
+        if (opt == "1")
         {
             std::string path = std::filesystem::current_path();
             for (const auto &file : std::filesystem::directory_iterator(path))
                 std::cout << file.path() << std::endl;
             std::cout << "\n\n";
         }
-        else if (opt == 2)
+        else if (opt == "2")
         {
             std::cout << "File to copy:";
             std::string fileName;
@@ -53,7 +53,7 @@ int main()
                 std::cout << "That file does not exist!\n\n";
             }
         }
-        else if (opt == 3)
+        else if (opt == "3")
         {
             std::cout << "Fix all rules to file:";
             std::string fileName;
@@ -72,7 +72,7 @@ int main()
                 std::cout << "That file does not exist!\n\n";
             }
         }
-        else if (opt == 10)
+        else if (opt == "10")
         {
             break;
         }
