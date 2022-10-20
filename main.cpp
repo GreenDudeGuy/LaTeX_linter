@@ -5,9 +5,16 @@
 #include "Reader.h"
 
 using json = nlohmann::json;
-
+//using namespace nlohmann::literals;
 int main()
 {
+
+    if (!std::filesystem::exists("rules.json"))
+    {
+        json j = "{\"rules\":[{\"rule_name\":\"intentions\",\"active\":true},{\"rule_name\":\"newline\",\"active\":true},{\"rule_name\":\"format_comment\",\"active\":true},{\"rule_name\":\"blank_lines\",\"active\":true,\"number\":1}]}"_json;
+        std::ofstream rules("rules.json", std::ios::binary);
+        rules << j;
+    }
     std::ifstream f("rules.json");
     json data = json::parse(f);
     bool intentionsRule = data.at("rules")[0].at("active");
@@ -54,7 +61,11 @@ int main()
             if (std::filesystem::exists(fileName))
             {
                 Reader Readfile;
+                auto start = std::chrono::high_resolution_clock::now();
                 Readfile.allRules(fileName, intentionsRule, newlineRule, formatCommentRule, blankLineRule, blankLineRuleInt);
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+                std::cout << std::to_string(duration.count()) + " microseconds" << std::endl;
             }
             else
             {
