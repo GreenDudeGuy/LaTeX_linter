@@ -21,4 +21,4 @@ When starting the program for the first time a rule.json will be created if it d
 
 ## Running 
 
-Download from the bin folder and run with `./application`
+Download from the bin folder and run with `./tmalr`
