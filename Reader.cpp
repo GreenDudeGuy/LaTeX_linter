@@ -118,8 +118,6 @@ void Reader::newlineFix(std::string &line)
 {
     std::string dots = ". ";
     std::string dotsNewline = ".\n";
-    std::vector<std::pair<std::string, int>> links;
-    size_t posLink = std::string::npos;
     if (line[0] == '%' || line[0] == '\\')
     {
         line + "\n";
