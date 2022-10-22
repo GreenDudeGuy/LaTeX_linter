@@ -8,7 +8,7 @@ The program starts with a menu that has a few options.
 
 To edit files with the rules you have to add the files to where the program is located.
 
-When starting the program for the first time a rule.json will be created if it does not exist.
+When starting the program for the first time a rules.json will be created if it does not exist. You can edit this rules.json to change the settings.
 
 ## Features 
 ● Intention (tabs or spaces) for environment blocks 
@@ -21,4 +21,4 @@ When starting the program for the first time a rule.json will be created if it d
 
 ## Running 
 
-Download from the bin folder and run with `./application`
+Download from the bin folder and run with `./tmalr`
